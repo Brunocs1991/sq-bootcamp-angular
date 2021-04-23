@@ -1,0 +1,32 @@
+<mat-accordion multi>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Meu Dia
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <app-agenda-task [tasks]="tarefasParaHoje"></app-agenda-task>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Amanhã
+      </mat-panel-title>
+      <mat-panel-description>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <app-agenda-task [tasks]="tarefasParaAmanha"></app-agenda-task>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Próximos Dias
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <app-agenda-task [tasks]="tarefasParaOsProximosDias"></app-agenda-task>
+  </mat-expansion-panel>
+
+</mat-accordion>

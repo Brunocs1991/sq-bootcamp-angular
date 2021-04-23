@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "msjsdiag.debugger-for-chrome",
+    "esbenp.prettier-vscode",
+    "editorconfig.editorconfig",
+    "rbbit.typescript-hero",
+    "angular.ng-template",
+    "johnpapa.angular2",
+    "christian-kohler.path-intellisense",
+    "hookyqr.beautify"
+  ]
+}

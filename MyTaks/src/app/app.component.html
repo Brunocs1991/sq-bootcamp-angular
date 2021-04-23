@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <a mat-menu-item [routerLink]="['/agenda']">
+      <mat-icon>view_agenda</mat-icon>
+      <span>Agenda</span>
+    </a>
+  </mat-menu>
+  <span>Minhas tarefas</span>
+  <span class="example-spacer"></span>
+  <button mat-button (click)="openDialog()"><mat-icon>add_task</mat-icon> Adcionar tarefa</button>
+</mat-toolbar>
+
+<div class="mt-3 container">
+  <router-outlet></router-outlet>
+</div>

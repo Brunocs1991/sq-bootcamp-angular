@@ -1,0 +1,20 @@
+<ng-container *ngFor="let task of tasks">
+  <section class="task">
+    <div class="task-title">
+      <mat-checkbox
+        class="checkbox"
+        [(ngModel)]="task.done"
+        (change)="done(task, $event)">
+      </mat-checkbox>
+      <span [ngClass]="{ 'task-done': task.done === true }">
+        {{ task.title }}
+      </span>
+    </div>
+    <span class="spacer"></span>
+    <span class="align-middle task-actions">
+      <button mat-icon-button color="warn" (click)="deleteTask(task.id)">
+        <mat-icon>delete_forever</mat-icon>
+      </button>
+    </span>
+  </section>
+</ng-container>

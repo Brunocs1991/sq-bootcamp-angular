@@ -10,6 +10,7 @@ import { TaskService } from '../services/task.service';
 })
 export class AgendaTaskComponent implements OnInit {
   @Input() tasks: Task[] = [];
+  @Input() exibir: boolean = false;
 
   constructor(private taskServe: TaskService) {}
 
@@ -21,18 +22,5 @@ export class AgendaTaskComponent implements OnInit {
 
   deleteTask(taskId: number | undefined) {
     this.taskServe.deleteTask(taskId).subscribe();
-  }
-  dataExibir(dataTarefa: Date, dias: number) {
-    //recuperando data atual, e somando os dias conforme parametro esperado
-    var dataSomanda = new Date();
-    dataSomanda.setDate(dataSomanda.getDate() + dias - 1);
-
-    //formatando a dataTarefa do formatro isostring para date para comparação.
-    var dataTarefaFormatada = new Date(dataTarefa);
-
-    if (dataTarefaFormatada >= dataSomanda) {
-      return true;
-    }
-    return false;
   }
 }

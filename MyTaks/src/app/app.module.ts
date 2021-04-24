@@ -26,9 +26,10 @@ import { FormsModule } from '@angular/forms';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { TaskService } from './services/task.service';
 import { HttpClientModule } from '@angular/common/http';
+import { TodasTarefasComponent } from './todas-tarefas/todas-tarefas.component';
 
 @NgModule({
-  declarations: [AppComponent, AgendaComponent, AgendaTaskComponent, DialogAddTaskComponent],
+  declarations: [AppComponent, AgendaComponent, AgendaTaskComponent, DialogAddTaskComponent, TodasTarefasComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

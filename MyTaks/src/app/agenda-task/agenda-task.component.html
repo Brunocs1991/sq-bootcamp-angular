@@ -8,7 +8,7 @@
       </mat-checkbox>
       <span [ngClass]="{ 'task-done': task.done === true }">
         {{ task.title }}
-        <mat-panel-description  *ngIf="dataExibir(task.remindMe, 2)">
+        <mat-panel-description  *ngIf="exibir === true">
           {{task.remindMe | date: 'dd/MM/yyyy'}}
         </mat-panel-description>
       </span>

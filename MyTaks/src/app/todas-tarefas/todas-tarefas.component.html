@@ -1,1 +1,10 @@
-<p>todas-tarefas works!</p>
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Todas Tarefas
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <app-agenda-task [tasks]="tarefasRecuperadas"></app-agenda-task>
+  </mat-expansion-panel>
+</mat-accordion>

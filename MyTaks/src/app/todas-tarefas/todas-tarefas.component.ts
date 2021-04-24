@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Task } from '../services/models/task.model';
+import { TaskService } from '../services/task.service';
 
 @Component({
   selector: 'app-todas-tarefas',
@@ -7,9 +9,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodasTarefasComponent implements OnInit {
 
-  constructor() { }
+  tarefasRecuperadas: Task[] = [];
+
+  constructor(private taskService: TaskService) { }
 
   ngOnInit(): void {
+    this.taskService.onUpdateTasks()
+    .subscribe(
+      () => {
+        this.init();
+      }
+    );
+
+    this.init();
   }
 
+  private init() {
+    this.listTasksAll();
+  }
+  private listTasksAll() {
+    this.taskService
+    .listAllTask()
+    .subscribe(
+      (tarefas: Task[]) => {
+        this.tarefasRecuperadas = tarefas;
+      }
+    );
+  }
 }
